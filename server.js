@@ -1,3 +1,15 @@
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://venus-casino.glitch.me/`);
+}, 280000);
+
+
 const fs = require('fs');  //WESO#0001
 const moment = require('moment');
 const axios = require('axios').default;
