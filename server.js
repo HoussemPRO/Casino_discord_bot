@@ -1,32 +1,7 @@
-const http = require('http');
-const express = require('express');
-const app = express();
-app.get("/", (request, response) => {
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://venus-casino.glitch.me/`);
-}, 280000);
-
-const fs = require('fs');  //WESO#0001
-const moment = require('moment');
-const axios = require('axios').default;
-const request = require('request');
-const db = require('quick.db')
-var Jimp = require('jimp');
-const guild = require('guild');
-const dateFormat = require('dateformat'); //npm i dateformat
-const YouTube = require('simple-youtube-api');
-const youtube = new YouTube('AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8');
-const hastebins = require('hastebin-gen');
-const getYoutubeID = require('get-youtube-id');
-const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const pretty = require("pretty-ms");
-const queue = new Map();
-var table = require('table').table
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const fs = require('fs');  //WESO#0001
+
 var prefix = "$";
 let Cooldown = new Set()
 let cdsc = 60000;
@@ -35,6 +10,12 @@ let cdsc = 60000;
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
+
+var prefix = "$";
+let Cooldown = new Set()
+let cdsc = 60000;
+
+
 
 
 client.on('message', message => {
