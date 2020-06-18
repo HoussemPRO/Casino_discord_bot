@@ -32,6 +32,11 @@ let Cooldown = new Set()
 let cdsc = 60000;
 
 
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+
 client.on('message', message => {
     if (message.content.startsWith('$nre')){
   const credits = require('./creditsCode.json');
